@@ -1,31 +1,27 @@
-# Calorie Tracker MVP
+# Calorie Tracker with Food Search
 
-This is a simple browser-based calorie tracker.
+This version can search for food nutrition estimates.
 
-## How to use
+## How it works
 
-1. Unzip the folder.
-2. Open `index.html` in Chrome, Edge, Safari or your phone browser.
-3. Set your daily calorie and protein target.
-4. Add meals manually or use the quick Singapore food buttons.
-5. Your data is saved locally in your browser.
+1. The user enters a food name.
+2. The app checks local Singapore hawker estimates.
+3. The app also searches Open Food Facts online.
+4. The user can log the result directly or edit it before logging.
 
-## Current Features
+## Important Notes
 
-- Daily calorie target
-- Protein target
-- Meal logging
-- Calories, protein, carbs and fat tracking
-- Singapore quick food estimates
-- Mobile-friendly design
-- Saves data locally using browser localStorage
+- Open Food Facts works best for packaged foods and foods with database entries.
+- Singapore hawker foods are estimated using the built-in local estimate table.
+- Online food data is usually per 100g, so portion size may need adjustment.
+- This app is for personal tracking and estimates, not medical nutrition advice.
 
-## Suggested Next Upgrades
+## Files
 
-- AI natural language food logging
-- Food photo estimation
-- Weekly graphs
-- Weight tracking
-- Garmin calories import
-- Login and cloud database
-- Singapore hawker food database
+- index.html
+- style.css
+- script.js
+
+## Deployment
+
+Upload these files to GitHub Pages, replacing the older app files.

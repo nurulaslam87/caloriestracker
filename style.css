@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -10,7 +8,7 @@ body {
 }
 
 .app {
-  width: min(720px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
   padding: 16px;
 }
@@ -23,15 +21,8 @@ body {
   margin-bottom: 16px;
 }
 
-.hero h1 {
-  margin: 0 0 8px;
-  font-size: 32px;
-}
-
-.hero p {
-  margin: 0;
-  opacity: 0.9;
-}
+.hero h1 { margin: 0 0 8px; font-size: 32px; }
+.hero p { margin: 0; opacity: 0.9; }
 
 .card {
   background: white;
@@ -41,9 +32,7 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-h2 {
-  margin-top: 0;
-}
+h2 { margin-top: 0; }
 
 label {
   display: block;
@@ -71,13 +60,8 @@ button {
   margin-top: 8px;
 }
 
-button:hover {
-  opacity: 0.9;
-}
-
-.danger {
-  background: #dc2626;
-}
+button:hover { opacity: 0.9; }
+.danger { background: #dc2626; }
 
 .grid {
   display: grid;
@@ -90,7 +74,7 @@ button:hover {
   font-weight: 800;
 }
 
-.dashboard small {
+.dashboard small, .hint, .status {
   font-size: 14px;
   color: #6b7280;
 }
@@ -129,6 +113,36 @@ button:hover {
   font-size: 18px;
 }
 
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.search-result {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 10px;
+  background: #f9fafb;
+}
+
+.search-result strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.search-result .meta {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.search-result button {
+  margin-right: 8px;
+  background: #374151;
+}
+
 #mealList {
   list-style: none;
   padding: 0;
@@ -143,31 +157,12 @@ button:hover {
   gap: 12px;
 }
 
-.meal-title {
-  font-weight: 700;
-}
-
-.meal-meta {
-  color: #6b7280;
-  font-size: 13px;
-}
-
-.quick-foods {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.quick-foods button {
-  background: #374151;
-}
+.meal-title { font-weight: 700; }
+.meal-meta { color: #6b7280; font-size: 13px; }
 
 @media (max-width: 560px) {
-  .grid, .stats {
-    grid-template-columns: 1fr 1fr;
+  .grid, .stats, .search-row {
+    grid-template-columns: 1fr;
   }
-
-  .dashboard .big {
-    font-size: 34px;
-  }
+  .dashboard .big { font-size: 34px; }
 }
