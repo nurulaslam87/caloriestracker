@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.app {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #111827, #374151);
+  color: white;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.hero p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #111827;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.dashboard .big {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.dashboard small {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.progress {
+  width: 100%;
+  height: 18px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 12px 0 18px;
+}
+
+.progress div {
+  height: 100%;
+  width: 0%;
+  background: #111827;
+  transition: width 0.3s ease;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.stats div {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stats strong {
+  display: block;
+  font-size: 18px;
+}
+
+#mealList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mealList li {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.meal-title {
+  font-weight: 700;
+}
+
+.meal-meta {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.quick-foods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-foods button {
+  background: #374151;
+}
+
+@media (max-width: 560px) {
+  .grid, .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard .big {
+    font-size: 34px;
+  }
+}

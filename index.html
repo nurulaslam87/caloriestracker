@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calorie Tracker MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>Calorie Tracker</h1>
+      <p>Track meals, calories, protein, carbs and fats daily.</p>
+    </section>
+
+    <section class="card">
+      <h2>Daily Target</h2>
+      <div class="grid">
+        <label>
+          Calories Target
+          <input id="targetCalories" type="number" value="2100" />
+        </label>
+        <label>
+          Protein Target (g)
+          <input id="targetProtein" type="number" value="130" />
+        </label>
+      </div>
+      <button onclick="saveTargets()">Save Targets</button>
+    </section>
+
+    <section class="card dashboard">
+      <h2>Today</h2>
+      <div class="stat big">
+        <span id="totalCalories">0</span>
+        <small>/ <span id="targetCaloriesDisplay">2100</span> kcal</small>
+      </div>
+
+      <div class="progress">
+        <div id="calorieBar"></div>
+      </div>
+
+      <div class="stats">
+        <div><strong id="remainingCalories">2100</strong><small>Remaining</small></div>
+        <div><strong id="totalProtein">0g</strong><small>Protein</small></div>
+        <div><strong id="totalCarbs">0g</strong><small>Carbs</small></div>
+        <div><strong id="totalFat">0g</strong><small>Fat</small></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add Meal</h2>
+      <label>
+        Meal / Food
+        <input id="foodName" placeholder="e.g. Chicken rice, 4 eggs, kaya toast" />
+      </label>
+
+      <div class="grid">
+        <label>
+          Calories
+          <input id="foodCalories" type="number" placeholder="kcal" />
+        </label>
+        <label>
+          Protein (g)
+          <input id="foodProtein" type="number" placeholder="g" />
+        </label>
+        <label>
+          Carbs (g)
+          <input id="foodCarbs" type="number" placeholder="g" />
+        </label>
+        <label>
+          Fat (g)
+          <input id="foodFat" type="number" placeholder="g" />
+        </label>
+      </div>
+
+      <button onclick="addMeal()">Add Meal</button>
+    </section>
+
+    <section class="card">
+      <h2>Meal Log</h2>
+      <ul id="mealList"></ul>
+      <button class="danger" onclick="clearToday()">Clear Today</button>
+    </section>
+
+    <section class="card">
+      <h2>Quick Singapore Food Estimates</h2>
+      <div class="quick-foods">
+        <button onclick="quickAdd('Chicken rice', 650, 32, 75, 22)">Chicken Rice</button>
+        <button onclick="quickAdd('Fried chicken rice', 800, 35, 80, 35)">Fried Chicken Rice</button>
+        <button onclick="quickAdd('Kaya toast set', 520, 18, 55, 25)">Kaya Toast Set</button>
+        <button onclick="quickAdd('4 soft boiled eggs', 288, 24, 2, 20)">4 Eggs</button>
+        <button onclick="quickAdd('Kopi / Teh with milk', 150, 4, 24, 4)">Milk Tea/Coffee</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
